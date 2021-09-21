@@ -1,0 +1,20 @@
+@import "./utils/variables.scss";
+@import "./utils/functions.scss";
+@import "./utils/mixins.scss";
+@import "./utils/extensions.scss";
+@import "./base/typography.scss";
+@import "./layouts/header.scss";
+@import "./layouts/nav.scss";
+@import "./layouts/container.scss";
+@import "./layouts/form.scss";
+@import "./pages/work.scss";
+@import "./pages/about.scss";
+@import "./pages/project.scss";
+
+body {
+    background-color: black;
+}
+
+p{
+    margin: 1rem;
+}
