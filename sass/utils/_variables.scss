@@ -8,6 +8,8 @@ $btn-background-color: green;
 $order-btn-background-color: purple;
 $footer-background-color: #000;
 $border-color: green;
+$bold-text: bold;
+
 
 @for $i from 1 through 3 {
     .nav-btn-#{$i}{

@@ -1,0 +1,6 @@
+@mixin titles-primary-color{
+    h1, h2{
+    color: $primary-color;
+    font-weight:$bold-text
+    }
+}

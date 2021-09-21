@@ -1,0 +1,10 @@
+nav{
+@include titles-primary-color;
+    ul li{
+        font-weight: $bold-text;
+    }
+
+    ul li:hover{
+    color: $main-menu-background-color;
+    }
+}
