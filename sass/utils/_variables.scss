@@ -1,2 +1,18 @@
+// colors-variables
+$primary-color: #000;
+$secondary-color: #fff;
+$primary-background-color: grey;
+$secondary-background-color: #fff;
+$main-menu-background-color: violet;
+$btn-background-color: green;
+$order-btn-background-color: purple;
+$footer-background-color: #000;
+$border-color: green;
 
-
+@for $i from 1 through 3 {
+    .nav-btn-#{$i}{
+        border-radius: 5rem;
+        color:$primary-color;
+        background-color:$secondary-background-color;
+    }
+}
