@@ -6,13 +6,24 @@
 @import "./layouts/header.scss";
 @import "./layouts/nav.scss";
 @import "./layouts/container.scss";
-@import "./layouts/form.scss";
-@import "./pages/page-3.scss";
-@import "./pages/page-1.scss";
 @import "./pages/page-2.scss";
+@import "./pages/page-4.scss";
+@import "./pages/page-3.scss";
 
 body {
+    max-width: 375px;
     margin: 0 auto;
+    display: grid;
+    grid-template:1fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "section"
+    "footer";
+    grid-auto-flow: column;
 }
 
-
+.section__cards-containers img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}

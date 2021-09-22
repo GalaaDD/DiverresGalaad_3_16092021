@@ -4,3 +4,16 @@
     font-weight:$bold-text
     }
 }
+
+@mixin flex-center{
+    display: flex; 
+    justify-content: center;
+}
+
+@mixin border-radius-cards{
+    border-radius: 1rem;
+}
+
+@mixin box-shadow{
+    box-shadow: black;
+}

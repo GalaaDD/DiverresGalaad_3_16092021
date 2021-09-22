@@ -1,4 +1,9 @@
 nav{
+    grid-area: "nav";
+    .nav__container{
+
+    }
+    
 @include titles-primary-color;
     ul li{
         font-weight: $bold-text;
