@@ -46,3 +46,8 @@ footer{
             @include margin-sides-mobile;
     }
 }
+
+.article__cards-containers{
+    height: 4.375rem;
+    @include cards-model;
+}
