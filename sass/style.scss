@@ -9,10 +9,14 @@
 @import "./pages/page-2.scss";
 @import "./pages/page-4.scss";
 @import "./pages/page-3.scss";
+body{
+    max-width: 23.43rem;
+    margin: 0 auto;
+    
+}
 
 .body__bloc-page {
-    max-width: 375px;
-    margin: 0 auto;
+   
     display: grid;
     grid-template-areas: 
     "header"

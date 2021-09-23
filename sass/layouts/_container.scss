@@ -1,7 +1,7 @@
 
 
 section{ 
-   
+    @include margin-sides-mobile;
     @include flex-column;
     display:grid;
     grid-area: "section"
@@ -12,12 +12,22 @@ section{
     height: 15.625rem;
     @include border-radius;
     @include box-shadow;
+    
     margin-bottom: 0.875rem;
-    h3,p{
-        padding-left: 15px;
-        line-height: 10px; 
+
+        h3,p{
+            line-height: 0.1rem;
+            @include align-center;
+            @include paddings-right-mobile;
+    }
+
+            .title--flex{
+                    @include flex-between;
+                    @include paddings-right-mobile;
+                    @include align-center;
     }
 }
+
 
 .section__cards-containers img{
     width: 100%;
@@ -28,7 +38,11 @@ section{
 }
 
 footer{
-    height: 12.5rem;
+    height: 12.18rem;
     grid-area: "footer";
+    color: #fff;
     background-color: $footer-background-color;
+        & p{
+            @include margin-sides-mobile;
+    }
 }

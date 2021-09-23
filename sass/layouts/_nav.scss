@@ -1,18 +1,21 @@
 nav{
+    @include margin-sides-mobile;
     display: grid;
     grid-area: "nav";
     @include titles-primary-color;
-    ul li{
-        font-weight: bold;
+        ul li{
+            font-weight: bold;
     }
 }
 
 .nav__icon{
-    color: $text-tertiary-color;
-    &:hover{
-    color: $primary-color;
+    @include flex-between;
+        color: $text-tertiary-color;
+            &:hover{
+                color: $primary-color;
     }
 }
+
 ul li {
     list-style-type: none;
 }
@@ -28,6 +31,7 @@ ul li {
     @include box-shadow;
     @include flex-space-around;
     height: 4.688rem;
+    @include align-center;
         &:hover{
             background-color: $btn-background-color;
             @include lighten;

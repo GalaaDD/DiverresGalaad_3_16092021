@@ -1,12 +1,16 @@
 @mixin titles-primary-color{
     h1, h2, h3{
     color:$text-primary-color;
-    font-weight:bold;
     }
 }
 
 @mixin text-center{
  text-align: center;
+ align-content: center;
+}
+
+@mixin align-center{
+align-items: center;
 }
 
 @mixin flex-center{
@@ -36,7 +40,7 @@
 }
 
 @mixin box-shadow{
-    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 5%);
 }
 
 @mixin lighten{
@@ -45,9 +49,27 @@
 }
 
 @mixin padding-right{
-    padding-right: 12;
+    padding-right: 0.75rem;
 }
 
-@mixin darken-background{
-    $primary-background-color: darken($primary-background-color, 10%);
+@mixin padding-top{
+    padding-top: 0.75rem;
 }
+
+@mixin paddings-right-mobile{
+    padding-right: 0.93rem;
+}
+
+@mixin margin-sides-mobile {
+    margin: 0 1.25rem 0 1.25rem;
+}
+
+@mixin margin-right{
+    margin-right: 1.25rem;
+}
+
+@mixin margin-bottom{
+    margin-bottom: 3.43rem;
+}
+
+
