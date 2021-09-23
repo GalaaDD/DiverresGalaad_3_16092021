@@ -1,7 +1,7 @@
 @mixin titles-primary-color{
-    h1, h2{
-    color: $primary-color;
-    font-weight:$bold-text
+    h1, h2, h3{
+    color:$text-primary-color;
+    font-weight:bold;
     }
 }
 
@@ -10,10 +10,20 @@
     justify-content: center;
 }
 
+@mixin flex-column{
+    display: flex; 
+    flex-direction:column;
+}
+
+@mixin flex-space-around{
+display: flex; 
+justify-content: space-around;
+}
+
 @mixin border-radius-cards{
     border-radius: 1rem;
 }
 
 @mixin box-shadow{
-    box-shadow: black;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
 }
