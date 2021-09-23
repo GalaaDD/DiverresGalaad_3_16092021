@@ -1,9 +1,6 @@
 
 header{
     grid-area: header;
-    flex-direction: column;
-    @include flex-center;
-    @include flex-column;
 }
 
 .header__logo{
@@ -12,4 +9,11 @@ header{
 
 .header__localization-bloc{
     
+}
+
+.btn--purple{
+color: $text-secondary-color;
+background-color: $btn-background-color;
+@include box-shadow;
+@include border-radius;
 }

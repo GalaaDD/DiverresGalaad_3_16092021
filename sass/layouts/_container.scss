@@ -13,7 +13,7 @@ section{
     width: 100%;
     @include flex-center;
     @include flex-column;
-    @include border-radius-cards;
+    @include border-radius;
 }
 
 
