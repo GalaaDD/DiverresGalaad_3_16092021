@@ -6,10 +6,14 @@ nav{
     
 @include titles-primary-color;
     ul li{
-        font-weight: $bold-text;
+        font-weight: bold;
     }
 
     ul li:hover{
     color: $main-menu-background-color;
     }
+}
+
+ul li {
+    list-style-type: none;
 }

@@ -21,9 +21,14 @@ body {
     "section"
     "footer";
     grid-auto-flow: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 .section__cards-containers img{
     width: 100%;
     border-radius: 1rem 1rem 0 0;
+}
+
+a{
+    text-decoration: none;
 }

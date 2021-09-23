@@ -1,6 +1,9 @@
 
 header{
     grid-area: header;
+    flex-direction: column;
+    @include flex-center;
+    @include flex-column;
 }
 
 .header__logo{

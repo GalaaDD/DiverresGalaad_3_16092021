@@ -1,21 +1,26 @@
+
+.body__bloc-page{
+
+}
+
 section{
-grid-area: "section"
+    height: 69rem;
+    grid-area: "section"
 }
 
 .section__cards-containers{
-   width: 100%;
-   @include border-radius-cards;
+    @include flex-space-around;
+    width: 100%;
+    @include flex-center;
+    @include flex-column;
+    @include border-radius-cards;
 }
+
+
+
+
 
 footer{
     grid-area: "footer";
     background-color: $footer-background-color;
-}
-
-h2, p {
-    color:$secondary-color;
-}
-
-article{
-    
 }
