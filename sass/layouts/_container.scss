@@ -1,26 +1,36 @@
 
-.body__bloc-page{
 
-}
-
-section{
-    height: 69rem;
+section{ 
+   
+    @include flex-column;
     grid-area: "section"
 }
 
 .section__cards-containers{
-    @include flex-space-around;
     width: 100%;
-    @include flex-center;
-    @include flex-column;
+    height: 15.625rem;
     @include border-radius;
+    @include box-shadow;
+    margin-bottom: 0.875rem;
+    h3,p{
+        padding-left: 15px;
+        line-height: 10px; 
+    }
 }
 
+.section__cards-containers img{
+    width: 100%;
+    object-fit: cover;
+    height: 11rem;
+    border-radius: 1rem 1rem 0 0;
+
+}
 
 
 
 
 footer{
+    height: 12.5rem;
     grid-area: "footer";
     background-color: $footer-background-color;
 }

@@ -1,19 +1,21 @@
 nav{
     grid-area: "nav";
-    .nav__container{
-
-    }
-    
-@include titles-primary-color;
+    @include titles-primary-color;
     ul li{
         font-weight: bold;
     }
-
     ul li:hover{
-    color: $main-menu-background-color;
+    background-color: $btn-background-color;
+    @include lighten;
     }
 }
 
 ul li {
     list-style-type: none;
+}
+
+.nav__cards-container{
+    @include border-radius;
+    @include box-shadow;
+    height: 1rem;
 }
