@@ -21,6 +21,7 @@
     "footer";
     grid-auto-flow: column;
     font-family: 'Roboto', sans-serif;
+    @include titles-primary-color;
 }
 
 

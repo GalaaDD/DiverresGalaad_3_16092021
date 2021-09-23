@@ -3,6 +3,7 @@
 section{ 
    
     @include flex-column;
+    display:grid;
     grid-area: "section"
 }
 
@@ -25,9 +26,6 @@ section{
     border-radius: 1rem 1rem 0 0;
 
 }
-
-
-
 
 footer{
     height: 12.5rem;

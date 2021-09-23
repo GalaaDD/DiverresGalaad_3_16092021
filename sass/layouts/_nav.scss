@@ -1,21 +1,35 @@
 nav{
+    display: grid;
     grid-area: "nav";
     @include titles-primary-color;
     ul li{
         font-weight: bold;
     }
-    ul li:hover{
-    background-color: $btn-background-color;
-    @include lighten;
-    }
 }
 
+.nav__icon{
+    color: $text-tertiary-color;
+    &:hover{
+    color: $primary-color;
+    }
+}
 ul li {
     list-style-type: none;
+}
+
+.nav__container{
+    height: 17.2rem;
+    @include flex-between;
+    @include flex-column;
 }
 
 .nav__cards-container{
     @include border-radius;
     @include box-shadow;
-    height: 1rem;
+    @include flex-space-around;
+    height: 4.688rem;
+        &:hover{
+            background-color: $btn-background-color;
+            @include lighten;
+            }  
 }

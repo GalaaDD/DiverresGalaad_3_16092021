@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 h1,.footer__title {
     font-family: 'Shrikhand', sans-serif;
@@ -8,3 +9,8 @@ h1,.footer__title {
 .footer__title{
     color:$text-secondary-color;
 }
+
+a {
+    color: $text-primary-color;
+}
+

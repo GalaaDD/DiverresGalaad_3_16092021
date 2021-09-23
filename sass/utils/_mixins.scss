@@ -5,6 +5,10 @@
     }
 }
 
+@mixin text-center{
+ text-align: center;
+}
+
 @mixin flex-center{
     display: flex; 
     justify-content: center;
@@ -18,8 +22,13 @@
 }
 
 @mixin flex-space-around{
-display: flex; 
-justify-content: space-around;
+    display: flex; 
+    justify-content: space-around;
+}
+
+@mixin flex-between{
+    display: flex;
+    justify-content: space-between;
 }
 
 @mixin border-radius{
@@ -33,4 +42,12 @@ justify-content: space-around;
 @mixin lighten{
     background-color: lighten($btn-background-color, 35%);
 
+}
+
+@mixin padding-right{
+    padding-right: 12;
+}
+
+@mixin darken-background{
+    $primary-background-color: darken($primary-background-color, 10%);
 }
