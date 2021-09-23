@@ -2,20 +2,12 @@
 $primary-color: #9356DC ;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$text-primary-color: #000;
+$text-secondary-color:#fff;
 $primary-background-color: grey;
 $secondary-background-color: #fff;
 $main-menu-background-color: violet;
-$btn-background-color: green;
-$order-btn-background-color: purple;
+$cards-btn-background-color: green;
+$btn-background-color:#9356DC;
 $footer-background-color: #000;
 $border-color: green;
-$bold-text: bold;
-
-
-@for $i from 1 through 3 {
-    .nav-btn-#{$i}{
-        border-radius: 5rem;
-        color:$primary-color;
-        background-color:$secondary-background-color;
-    }
-}
