@@ -26,7 +26,6 @@ header{
 
 .btn--purple{
     color: $text-secondary-color;
-    background-color:  linear-gradient(45deg #e872da, #a05adc);
     @include box-shadow;
     @include border-radius;
     @include margin-bottom;

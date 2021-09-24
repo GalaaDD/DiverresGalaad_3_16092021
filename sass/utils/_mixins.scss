@@ -83,6 +83,11 @@ align-items: center;
     background-color:$text-tertiary-color;
 }
 
+@mixin btn--pink-model{
+    background: rgb(147,86,220);
+    background: linear-gradient(356deg, rgba(147,86,220,1) 30%, rgba(255,121,218,1) 100%);
+}
+
 
 /*responsive-Desktop
 @mixin Desktop-only {
