@@ -79,4 +79,21 @@ align-items: center;
     margin-bottom: .875rem;
     display: flex;
     @include align-center;
+    @include box-shadow;
+    background-color:$text-tertiary-color;
 }
+
+
+/*responsive-Desktop
+@mixin Desktop-only {
+      @media screen and (max-width: map-get($breakpoints-desktop, desktop)){
+          grid-template-columns: 1fr;
+      }
+    }
+/*responsive-tabs
+@mixin Desktop-only {
+      @media screen and (max-width: map-get($breakpoints, mobile)){
+          grid-template-columns: 1fr;
+      }
+    }
+    */

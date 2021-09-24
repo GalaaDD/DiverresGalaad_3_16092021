@@ -4,10 +4,20 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $text-primary-color: #000;
 $text-secondary-color:#fff;
-$text-tertiary-color:darken(#F2F2F2, 10%); 
-$primary-background-color:darken(#F2F2F2, 5%); 
-$secondary-background-color: #F2F2F2;
+$text-tertiary-color:#F2F2F2;
+$primary-background-color:#eaeaea; 
+$secondary-background-color:#f6f6f6;
 $cards-btn-background-color: $tertiary-color;
 $btn-background-color:#9356DC;
 $footer-background-color: #000;
 $border-color: green;
+
+//responsive
+
+$breakpoints-desktop: (
+  desktop: 64rem
+  );
+
+  $breakpoints-tab: (
+  tab: 64rem
+  );
