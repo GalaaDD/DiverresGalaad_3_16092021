@@ -80,7 +80,7 @@ align-items: center;
     display: flex;
     @include align-center;
     @include box-shadow;
-    background-color:$text-tertiary-color;
+    background-color:$primary-background-color;
 }
 
 @mixin btn--pink-model{

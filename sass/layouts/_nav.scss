@@ -10,7 +10,7 @@ nav{
 
 .nav__icon{
     @include flex-between;
-        color: $text-tertiary-color;
+        color: $text-primary-color;
             &:hover{
                 color: $primary-color;
     }
@@ -33,7 +33,7 @@ ul li {
     height: 4.688rem;
     @include align-center;
         &:hover{
-            background-color: $btn-background-color;
+            background-color:  $primary-color;
             @include lighten;
             }  
 }
