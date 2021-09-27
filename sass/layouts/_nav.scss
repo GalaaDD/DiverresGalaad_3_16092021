@@ -53,3 +53,7 @@ nav{
             @include lighten;
             }  
 }
+
+.btn--purple-container{
+    @include flex-center;
+}
