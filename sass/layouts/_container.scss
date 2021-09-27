@@ -39,6 +39,7 @@ section{
 
 footer{
     height: 12.18rem;
+    display: grid;
     grid-area: "footer";
     color: #fff;
     background-color: $footer-background-color;

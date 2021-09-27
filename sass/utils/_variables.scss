@@ -4,7 +4,7 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $text-primary-color: #000;
 $text-secondary-color:#fff;
-$text-tertiary-color:#F2F2F2;
+$text-tertiary-color:#7e7e7e;
 $primary-background-color:#fff; 
 $secondary-background-color:#eaeaea;
 $tertiary-background-color:#f6f6f6;
@@ -12,6 +12,10 @@ $cards-btn-background-color: $tertiary-background-color;
 $btn-background-color:$primary-color; /*linear-gradient(356deg, $primary-color 30%, $secondary-color 100%);*/
 $footer-background-color: #000;
 $border-color: $tertiary-color;
+
+$primary-text-size:1.12rem;
+$secondary-text-size: 0.87rem;
+$tertiary-text-size: 0.75rem;
 
 //responsive
 
