@@ -72,7 +72,22 @@ section{
     border-radius: 1rem 1rem 0 0;
 }
 
+.icon--absolute{
+position: relative;
 
+}
+
+span{
+    font-weight: bold;
+    font-size: $tertiary-text-size;
+    background-color: $tertiary-color;
+    color: #008766;
+    position: absolute;
+    top: 0.875rem; right: 0.75rem;
+    border-radius: 0.125rem;
+    padding:0.625rem;
+   
+}
 
 footer{
     color: $text-secondary-color;
