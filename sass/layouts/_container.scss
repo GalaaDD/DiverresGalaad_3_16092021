@@ -11,10 +11,10 @@ section{
             width: 100%;
     }
 
-    h2, .section__cards-text{
-        @include margin-left;
-        padding-bottom: 0.62rem;
-    }
+            h2{
+                @include margin-left;
+                padding-bottom: 0.62rem;
+            }
 }
 
 .section__cards-bloc{
@@ -25,6 +25,7 @@ section{
 .section__cards-containers{
     width: 87%;
     margin-top: 1.125rem;
+    background-color: $primary-background-color;
     @include border-radius;
     @include box-shadow;
    
@@ -35,7 +36,6 @@ section{
 
             .section__cards-containers{
                     @include flex-between;
-                    @include paddings-right-mobile;
                     @include align-center;
                     background-color: $primary-background-color;
     }
@@ -57,6 +57,12 @@ section{
     font-size: $primary-logo-font-size;
 }
 
+.section__cards-text{
+    @include margin-left;
+    @include border-radius;
+    padding-bottom: 0.62rem;
+    background-color: $primary-background-color;
+}
 
 .section__cards-containers img{
     width: 100%;
@@ -64,7 +70,6 @@ section{
     object-fit: cover;
     height: 11rem;
     border-radius: 1rem 1rem 0 0;
-
 }
 
 footer{
