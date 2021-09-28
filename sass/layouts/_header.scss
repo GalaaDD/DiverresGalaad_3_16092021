@@ -26,8 +26,10 @@ header{
 }
 
 .btn--purple{
-    color: $text-secondary-color;
-    @include box-shadow;
-    @include border-radius;
-    @include margin-bottom;
+    @include flex-center;
+    @include main-btn;
+
+        &-container{
+            @include flex-center;
+        }
 }
