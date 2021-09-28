@@ -31,7 +31,6 @@ section{
         h3,p{
             line-height: 0.1rem;
             @include align-center;
-            @include paddings-right-mobile;
     }
 
             .section__cards-containers{
@@ -42,6 +41,10 @@ section{
     }
 }
 
+.section__title-cards-container{
+    width: 87.5%;
+}
+
 .title--flex{
     @include align-center;
     @include flex;
@@ -50,9 +53,10 @@ section{
 
 }
 
-.section__title-cards-container{
-    width: 90%;
+.section__logo{
+    font-size: $primary-logo-font-size;
 }
+
 
 .section__cards-containers img{
     width: 100%;
