@@ -13,6 +13,7 @@ section{
 
     h2, .section__cards-text{
         @include margin-left;
+        padding-bottom: 0.62rem;
     }
 }
 
@@ -44,6 +45,8 @@ section{
 .title--flex{
     @include align-center;
     @include flex;
+    margin-top: 1.25rem;
+    height: 1.12rem;
 
 }
 
