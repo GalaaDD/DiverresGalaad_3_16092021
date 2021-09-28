@@ -1,11 +1,6 @@
 body{
     max-width: 23.43rem;
     margin: 0 auto;
-    
-}
-
-.body__bloc-page {
-   
     display: grid;
     grid-template-areas: 
     "header"
@@ -15,6 +10,12 @@ body{
     grid-auto-flow: column;
     font-family: 'Roboto', sans-serif;
     @include titles-primary-color;
+    
+}
+
+.body__bloc-page {
+   
+   
 }
 
 

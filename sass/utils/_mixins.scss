@@ -17,6 +17,11 @@ align-items: center;
     display: flex;
 }
 
+@mixin flex-start{
+display: flex; 
+justify-content: flex-start;
+}
+
 @mixin flex-center{
     display: flex; 
     justify-content: center;
