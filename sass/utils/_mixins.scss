@@ -34,7 +34,6 @@ justify-content: flex-start;
 }
 
 @mixin flex-space-around{
-    display: flex; 
     justify-content: space-around;
 }
 

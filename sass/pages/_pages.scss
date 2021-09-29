@@ -17,9 +17,12 @@
         height: 100%;
     }
 
-    .header__secondary-title{
-        @include align-center;
+    .header__secondary-title-bloc{
+        @include flex-center;
         @include flex-space-around;
+    }
+
+    .header__secondary-title{
         border-radius: 50px 50px 0 0;
         position: relative;
         z-index:2;
@@ -32,6 +35,13 @@
         font-size: 1.375rem;
     }
 
+    article{
+
+        h2{
+            font-weight: normal;
+        }
+    }
+    
     .article__cards-containers{
         height: 4.375rem;
         @include cards-model;
