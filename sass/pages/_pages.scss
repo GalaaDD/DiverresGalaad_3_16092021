@@ -1,5 +1,6 @@
 .header__bloc-main-title{
     @include flex-center;
+    @include align-center;
     width: 82%;
 
         a {
@@ -18,7 +19,9 @@
     }
 
     .header__secondary-title-bloc{
+        background-color: $tertiary-background-color;
         @include flex-center;
+        @include align-center;
         @include flex-space-around;
     }
 
@@ -31,18 +34,69 @@
                 font-size: 1.75rem;
             }
     }
+
     .header__icon{
         font-size: 1.375rem;
     }
 
-    article{
-
-        h2{
-            font-weight: normal;
-        }
+    main { 
+        background-color: $tertiary-background-color;
     }
     
+    article{
+       
+        display: grid;
+        grid-area: "section";
+            h2{
+                font-weight: normal;
+                text-transform: uppercase;
+                margin-bottom: 9px;
+            }
+    }
+
+    .article__title-border{
+        border: 2px solid $tertiary-color;
+        width: 15%;
+        margin-bottom: 14px;
+    }   
+
     .article__cards-containers{
-        height: 4.375rem;
+        width: 85%;
+        max-height: 70px;
+        line-height:0.625rem;
+        padding: 1rem 1rem;
         @include cards-model;
+        @include flex-between;
+
+           
+    }
+
+    .article__column-text{
+        h3{
+            margin-top: 0;
+        }
+
+            & p{
+                margin-bottom:0;
+            }
+    }
+    
+    .article__column-icon{
+        @include flex;
+        align-items: flex-end;
+        font-weight: bold;
+            p{
+                margin: 0;
+            }
+    }
+
+    .bloc--flex{
+        @include flex-center;
+        @include flex-column;
+        flex-wrap:wrap;
+
+            a{
+                @include flex;
+                @include flex-center;
+            }
     }

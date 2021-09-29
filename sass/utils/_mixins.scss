@@ -25,12 +25,10 @@ justify-content: flex-start;
 @mixin flex-center{
     display: flex; 
     justify-content: center;
-    align-items: center;
 }
 
 @mixin flex-column{
     flex-direction:column;
-    flex-wrap: wrap;
 }
 
 @mixin flex-space-around{
@@ -96,11 +94,8 @@ justify-content: flex-start;
 }
 
 @mixin cards-model{
-    width: 100%;
     border-radius: 1rem;
     margin-bottom: .875rem;
-    display: flex;
-    @include align-center;
     @include box-shadow;
     background-color:$primary-background-color;
 }
