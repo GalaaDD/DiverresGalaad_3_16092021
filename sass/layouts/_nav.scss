@@ -22,12 +22,10 @@ nav{
     margin-left: -0.62rem
 }
 
-.nav__icon{
+i {
         color: $text-tertiary-color;
         margin: 0 1.563rem 0 1.563rem;
-            &:hover{
-                color: $primary-color;
-    }
+           
 }
 
 .nav__numbers-icons{
@@ -48,10 +46,17 @@ nav{
     padding: 1.56rem 0 1.56rem 0;
     margin-bottom:1.56rem;
     width: 100%;
-        &:hover{
-            background-color:  $primary-color;
-            @include lighten;
-            }  
+       
+            &:hover {
+                background-color:  $primary-color;
+                @include lighten;
+
+                &:hover i{
+                    color: $primary-color;
+                }    
+            } 
+
+           
 }
 
 .btn--purple-container{
