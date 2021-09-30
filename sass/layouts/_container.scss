@@ -5,14 +5,13 @@ section{
     @include flex-column;
     display:grid;
     grid-area: "section";
-    padding: 2.25rem 0 4.063rem 0;
+    padding: 3.75rem 0 4.063rem 0;
 
         &__cards-text{
             width: 100%;
     }
-
             h2{
-                @include margin-left;
+               margin: 0 0 0.313rem 1.25rem;
             }
 }
 
@@ -23,7 +22,7 @@ section{
 
 .section__cards-containers{
     width: 87%;
-    margin-top: 1.125rem;
+    margin-top: 0.875rem;
     background-color: $primary-background-color;
     @include border-radius;
     @include box-shadow;
@@ -47,7 +46,7 @@ section{
 .title--flex{
     @include align-center;
     @include flex;
-    margin-top: 1.25rem;
+    margin-top: 0.75rem;
     height: 1.12rem;
 
 }
