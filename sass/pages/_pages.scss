@@ -4,10 +4,10 @@ header{
 
 .header__bloc-main-title{
     @include flex-center;
-    @include align-center;
+    align-items:baseline;
     width: 82%;
         a {
-            font-size: 1rem;
+            font-size: 1.563rem;
     }
 }
 
@@ -74,7 +74,7 @@ article{
 
 .article__title-border{
     border: 0.125rem solid $tertiary-color;
-    width: 15%;
+    width: 12%;
     margin-bottom: 0.875rem;
 }   
 
@@ -105,3 +105,4 @@ article{
             margin: 0;
         }
 }
+
