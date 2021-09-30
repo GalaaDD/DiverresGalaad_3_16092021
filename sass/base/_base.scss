@@ -13,7 +13,10 @@ body{
     
 }
 
+.bloc-page{
+    position: relative;
+}
 
-a{
-    text-decoration: none;
+.btn--purple{
+    @include main-btn;
 }

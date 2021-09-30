@@ -5,7 +5,7 @@ section{
     @include flex-column;
     display:grid;
     grid-area: "section";
-    padding: 1.25rem 0 4.063rem 0;
+    padding: 2.25rem 0 4.063rem 0;
 
         &__cards-text{
             width: 100%;
@@ -13,7 +13,6 @@ section{
 
             h2{
                 @include margin-left;
-                padding-bottom: 0.62rem;
             }
 }
 

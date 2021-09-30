@@ -2,20 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+h1{
+    font-size: 28px;
+    margin:20px 0 10px 0;
+}
+
 h1,.footer__title {
     font-family: 'Shrikhand', sans-serif;
 }
 
-.footer__title{
-    color:$text-secondary-color;
-}
-
 a {
+    text-decoration: none;
     color: $text-primary-color;
-}
-
-h4{
-    color: $text-secondary-color;
 }
 
 ul{
@@ -25,4 +23,18 @@ ul{
 .btn--size{
     display:flex;
     justify-content: center;
+}
+
+.footer__title{
+    color:$text-secondary-color;
+}
+
+.bloc--flex{
+    @include flex-center;
+    @include flex-column;
+    flex-wrap:wrap;
+        a{
+            @include flex;
+            @include flex-center;
+        }
 }

@@ -1,31 +1,28 @@
 nav{
-    @include margin-sides-mobile;
     display: grid;
     grid-area: "nav";
     @include titles-primary-color;
-    div li{
-        list-style-type: none;
-        font-weight: bold;
-    }
+        h2{
+            margin-left: 1.25rem;
+        }
+        div li{
+            list-style-type: none;
+            font-weight: bold;
+        }
 }
 
 .nav__container{
-    display: flex; 
+    @include margin-sides-mobile;
+    @include flex-center;
     flex-wrap: wrap;
-    margin-left: 1.25rem;
+    margin-bottom: 2.5rem;
 }
 
 .nav__text{
     @include flex;
     @include align-center;
-    font-size: $secondary-text-size;
+    font-size: 1rem;
     margin-left: -0.62rem
-}
-
-i {
-        color: $text-tertiary-color;
-        margin: 0 1.563rem 0 1.563rem;
-           
 }
 
 .nav__numbers-icons{
@@ -43,10 +40,15 @@ i {
 .nav__cards-container{
     @include border-radius;
     @include box-shadow;
-   
+   background-color: $tertiary-background-color;
     padding: 1.56rem 0 1.56rem 0;
     margin-bottom:1.56rem;
     width: 100%;
+
+            a i{
+                color: $text-tertiary-color;
+                margin: 0 1.563rem 0 1.25rem;
+            }
        
             &:hover {
                 background-color:  $primary-color;
@@ -58,8 +60,4 @@ i {
             } 
 
            
-}
-
-.btn--purple-container{
-    @include flex-center;
 }
