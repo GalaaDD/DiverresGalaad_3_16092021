@@ -89,25 +89,32 @@ article{
 .article__cards-containers{
     width: 85%;
     height:3.125rem;
-    line-height:0.625rem;
+    line-height:0.125rem;
     padding: 1rem 1rem 0 1rem;
     @include cards-model;
     @include flex-between;   
 }
 
 .article__column-text{
+    width: 87%;
     h3 {
-        margin-top: 0;
+        line-height: 12px;
+        margin: 0 0 10px 0;
     } & p {
-        margin-bottom:14px;
+        margin:0;
+        line-height: 16px;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
     
 .article__column-icon{
     @include flex;
-    align-items: flex-end;
+    @include align-center;
     font-weight: bold;
     max-height: 2.5rem;
+    padding-top: 10px;
         p{
             margin: 0;
         }
