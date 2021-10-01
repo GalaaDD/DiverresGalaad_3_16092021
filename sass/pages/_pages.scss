@@ -80,9 +80,9 @@ article{
 
 .article__cards-containers{
     width: 85%;
-    max-height: 4.375rem;
+    height:3.125rem;
     line-height:0.625rem;
-    padding: 1rem 1rem 0.313rem 1rem;
+    padding: 1rem 1rem 0 1rem;
     @include cards-model;
     @include flex-between;   
 }
@@ -92,7 +92,7 @@ article{
         margin-top: 0;
     }
         & p{
-            margin-bottom:0;
+            margin-bottom:14px;
         }
 }
     
