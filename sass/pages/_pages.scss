@@ -39,7 +39,6 @@ main {
 }
 
 .secondary-title--margin{
-    @include margin-left;
         h2{
             font-family: 'Shrikhand', sans-serif;
             font-size: 1.75rem;
@@ -48,6 +47,7 @@ main {
 }
 
 .secondary-title__icon{
+    margin-right: 1.25rem;
     font-size: 1.375rem;
 }
     
@@ -82,7 +82,7 @@ article{
     width: 85%;
     max-height: 4.375rem;
     line-height:0.625rem;
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 0.313rem 1rem;
     @include cards-model;
     @include flex-between;   
 }
