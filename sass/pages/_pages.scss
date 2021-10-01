@@ -1,16 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 header{
     position: relative;
 }
 
 .header__bloc-main-title{
-    @include flex-center;
-    align-items:baseline;
-    width: 82%;
+    @include flex;
+    @include flex-space-around;
+    @include align-center;
+    width: 100%;
         a {
             font-size: 1.563rem;
     }
 }
 
+.logo--size{
+    padding-top: 1.25rem;
+}
 .header__title{
     font-size: 0.938rem;
     width: 85%;
@@ -67,9 +75,9 @@ article{
 
 .article__title{
     @include margin-left;
-        h2{
-            font-size: $primary-text-size;
-        }
+    h2{
+        font-size: $primary-text-size;
+    }
 }
 
 .article__title-border{
@@ -88,12 +96,11 @@ article{
 }
 
 .article__column-text{
-    h3{
+    h3 {
         margin-top: 0;
+    } & p {
+        margin-bottom:14px;
     }
-        & p{
-            margin-bottom:14px;
-        }
 }
     
 .article__column-icon{

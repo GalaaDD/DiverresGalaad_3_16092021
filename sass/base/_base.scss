@@ -13,11 +13,23 @@ body{
     
 }
 
+.logo--hover{
+    @include heart-icon;
+}
+
 .bloc-page{
     position: relative;
 }
 
-.btn--purple{
+.btn--purple-explorer{
+    @include main-btn;
+    padding: 1.031rem 1.25rem;
+    margin-bottom: 3.438rem;  
+}
+
+.btn--purple-order{
     @include main-btn;
     margin-top: 1.875rem;
+    padding: 0.938rem 3.125rem;
+    margin-bottom: 3.438rem;  
 }

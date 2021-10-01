@@ -52,12 +52,11 @@
     background:linear-gradient(355deg,#9356dc 0%, #ff79da 80%);
     color: $text-secondary-color;
     border: none;
-    border-radius: 1.56rem;
-    font-size:0.875rem;
+    border-radius: 2.188rem;
+    font-size:1rem;
     font-weight: 200;
-    padding: 0.938rem 3.125rem;
     @include box-shadow;
-    margin-bottom: 3.438rem;  
+   
 }
 
 @mixin lighten{
@@ -100,7 +99,14 @@
     background-color:$primary-background-color;
 }
 
-
+@mixin heart-icon {
+    :hover {
+		background: -webkit-linear-gradient($primary-color, $secondary-color);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: 900;
+	}
+}
 /*responsive-Desktop
 @mixin Desktop-only {
       @media screen and (max-width: map-get($breakpoints-desktop, desktop)){
