@@ -2,6 +2,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+@keyframes slide-left{
+    0% {
+        transform: scaleX(0);
+    }
+    17% {
+        transform: scaleX(.18);
+    }
+    24% {
+        transform: scaleX(.40);
+        animation-timing-function: cubic-bezier(.9,0,.1,1);
+    }
+    46% {
+        transform: scaleX(.81);
+        animation-timing-function: cubic-bezier(.25,0.25,1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+  /*@keyframes slide-left {
+    0% {
+              transform: translateX(-100%);
+    }
+    100% {
+              transform: translateX(0);
+    }
+  }
+  */
+
+@keyframes rotate-center {
+0% {
+    transform: rotate(0);
+}
+100% {
+    transform: rotate(360deg);
+    }
+}
+
+@keyframes article__cards-transition {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 header{
     position: relative;
 }
@@ -86,21 +137,24 @@ article{
 }   
 
 .article__cards-containers{
+    animation: article__cards-transition 3s ease 0.500ms 1 normal forwards;
     width: 85%;
-    height:3.125rem;
     line-height:0.125rem;
-    padding: 1rem 1rem 0 1rem;
+    padding-left: 1rem;
     @include cards-model;
-    @include flex-between;   
+    @include flex-between;
 }
 
 .article__column-text{
+    
     width: 87%;
+ 
     h3 {
         line-height: 12px;
-        margin: 0 0 10px 0;
-    } & p {
-        margin:0;
+        margin: 1rem 0 10px 0;
+        
+    }  p {
+        margin: 0;
         line-height: 16px;
         white-space:nowrap;
         overflow: hidden;
@@ -110,12 +164,45 @@ article{
     
 .article__column-icon{
     @include flex;
-    @include align-center;
+    align-items: flex-end;
     font-weight: bold;
     max-height: 2.5rem;
-    padding-top: 10px;
+    padding-top: 6px;
+    
         p{
             margin: 0;
+        }       
+}
+
+.article-cards__transition-container{ /*main-transition*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    animation-name: slide-left;
+    animation: slide-left 1s steps(4, end) both alternate;
+    color: $text-secondary-color;
+    background-color: $tertiary-color;
+    border-radius:0 15px 15px 0;
+    padding: 0;
+    transform: right scaleX(1);
+    transition:transform;
+   
+   
+}
+
+.article__cards-containers:hover> .article-cards__transition-container{/*main-transition*/
+   visibility: visible;
+   width: 82px;
+   margin-left: 20px;
+   
+   .transition--white-check-icon{
+        animation: rotate-center 0.5s ease-in-out both;
+        & i{
+            
+            align-self: center;
+            font-size: $primary-logo-font-size;
         }
+   }
 }
 
