@@ -33,7 +33,6 @@ ul{
     @include flex-column;
     flex-wrap:wrap;
         a{
-            @include flex;
             @include flex-center;
         }
 }
