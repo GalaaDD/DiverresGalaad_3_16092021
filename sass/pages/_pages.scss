@@ -6,17 +6,24 @@
     0% {
         transform: scaleX(0);
     }
-    17% {
+    5%{transform: scaleX(.05);
+    }
+    18% {
         transform: scaleX(.18);
     }
     24% {
-        transform: scaleX(.40);
-        animation-timing-function: cubic-bezier(.9,0,.1,1);
+        transform: scaleX(.24);
     }
-    46% {
+    50%{
+        transform: scaleX(.50);
+    }
+    65%{
+        transform: scaleX(.65);
+    }
+    80% {
         transform: scaleX(.81);
-        animation-timing-function: cubic-bezier(.25,0.25,1);
     }
+    
     100% {
         transform: scaleX(1);
     }
@@ -32,25 +39,27 @@
   */
 
 @keyframes rotate-center {
-0% {
-    transform: rotate(0);
-}
-100% {
-    transform: rotate(360deg);
+    0% {
+        transform: rotate(0);
     }
-}
+    100% {
+        transform: rotate(360deg);
+        }
+    }
 
 @keyframes article__cards-transition {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+
 
 
 header{
@@ -137,34 +146,44 @@ article{
 }   
 
 .article__cards-containers{
-    animation: article__cards-transition 3s ease 0.500ms 1 normal forwards;
+    animation: article__cards-transition 2s ease-out 1.4s normal both;
     width: 85%;
+    max-width: 350px;
+    min-height: 65px;
     line-height:0.125rem;
     padding-left: 1rem;
     @include cards-model;
     @include flex-between;
+    transform-origin: right;
 }
 
 .article__column-text{
     
-    width: 87%;
- 
+    width: 80%;
+    overflow: hidden;
     h3 {
-        line-height: 12px;
-        margin: 1rem 0 10px 0;
-        
-    }  p {
-        margin: 0;
+        font-size: 16px;
         line-height: 16px;
+        margin: 1rem 0 10px 0;
         white-space:nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        
+    }  p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 15px;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
     }
 }
     
 .article__column-icon{
     @include flex;
     align-items: flex-end;
+    @include flex-center;
     font-weight: bold;
     max-height: 2.5rem;
     padding-top: 6px;
@@ -175,33 +194,37 @@ article{
 }
 
 .article-cards__transition-container{ /*main-transition*/
-    display:flex;
-    justify-content: center;
-    align-items: center;
+   @include flex-center;
+    @include align-center;
     visibility: hidden;
-    animation-name: slide-left;
-    animation: slide-left 1s steps(4, end) both alternate;
-    color: $text-secondary-color;
+    font-size: $primary-logo-font-size;
+    color:$tertiary-color;
     background-color: $tertiary-color;
-    border-radius:0 15px 15px 0;
+    border-radius:0 1rem 1rem 0;
     padding: 0;
-    transform: right scaleX(1);
-    transition:transform;
+    transform: scaleX(0);
+    transform-origin:right;
+    transition: 500ms all;
+    opacity: 0;
+   
    
    
 }
 
 .article__cards-containers:hover> .article-cards__transition-container{/*main-transition*/
    visibility: visible;
-   width: 82px;
+   transform: scaleX(1);
+   min-width: 60px;
    margin-left: 20px;
-   
+   opacity: 1;
+   animation: slide-left 450ms linear 450ms right both;
+   font-size: $primary-logo-font-size;
    .transition--white-check-icon{
         animation: rotate-center 0.5s ease-in-out both;
         & i{
-            
+            color: $text-secondary-color;
             align-self: center;
-            font-size: $primary-logo-font-size;
+           
         }
    }
 }

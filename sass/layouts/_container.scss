@@ -3,6 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+/*key Frames*/
+@keyframes blinking-icons {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+  
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
 section{ 
     background-color: $tertiary-background-color;
     @include flex-column;
@@ -74,7 +88,8 @@ section{
 }
 
 .icon--absolute{
-position: relative;
+    animation: blinking-icons 4s ease-in-out 0s infinite normal both;
+    position: relative;
 
 }
 
