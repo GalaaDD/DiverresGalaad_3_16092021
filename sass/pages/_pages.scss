@@ -149,7 +149,7 @@ article{
     min-height: 4.063rem;
     line-height:0.125rem;
     padding-left: 1rem;
-    animation: article__cards-transition 1.5s ease-out 1.4s normal both;
+    animation: article__cards-transition 1.2s ease-out 1.4s normal both;
     transform-origin: right;
 }
 
@@ -205,7 +205,7 @@ article{
 .article__cards-containers:hover> .article-cards__transition-container{/*main-transition*/
    visibility: visible;
    transform: scaleX(1);
-   min-width: 3.75rem;
+   min-width: 20%;
    margin-left: 1.25rem;
    opacity: 1;
    animation: slide-left 450ms linear 450ms right both;
