@@ -32,7 +32,7 @@ ul{
     @include flex-center;
     @include flex-column;
     flex-wrap:wrap;
-        a{
-            @include flex-center;
-        }
+    a{
+        @include flex-center;
+    }
 }

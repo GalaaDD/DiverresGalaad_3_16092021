@@ -3,37 +3,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 @keyframes slide-left{
-    0% {
+    0%{
         transform: scaleX(0);
     }
+    
     5%{transform: scaleX(.05);
     }
-    18% {
+
+    18%{
         transform: scaleX(.18);
     }
-    24% {
+
+    24%{
         transform: scaleX(.24);
     }
+
     50%{
         transform: scaleX(.50);
     }
+
     65%{
         transform: scaleX(.65);
     }
-    80% {
+    
+    80%{
         transform: scaleX(.81);
     }
     
-    100% {
+    100%{
         transform: scaleX(1);
     }
 }
 
 @keyframes rotate-center {
-    0% {
+    0%{
         transform: rotate(0);
     }
-    100% {
+
+    100%{
         transform: rotate(360deg);
         }
     }
@@ -48,10 +55,7 @@
         opacity: 1;
         transform: translateY(0);
     }
-    }
-
-
-
+}
 
 header{
     position: relative;
@@ -62,8 +66,8 @@ header{
     @include flex-space-around;
     @include align-center;
     width: 100%;
-        a {
-            font-size: 1.563rem;
+    a {
+        font-size: 1.563rem;
     }
 }
 
@@ -87,10 +91,10 @@ main {
 }
 
 .secondary-title{
-    background-color: $tertiary-background-color;
     @include flex-center;
-    align-items: baseline;
     @include flex-space-around;
+    background-color: $tertiary-background-color;
+    align-items: baseline;
     position: relative;
     bottom: 3.75rem;
     z-index:2;
@@ -98,11 +102,11 @@ main {
 }
 
 .secondary-title--margin{
-        h2{
-            font-family: 'Shrikhand', sans-serif;
-            font-size: 1.75rem;
-            margin: 2.5rem 0 0 0;
-        }
+    h2{
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1.75rem;
+        margin: 2.5rem 0 0 0;
+    }
 }
 
 .secondary-title__icon{
@@ -113,11 +117,11 @@ main {
 article{
     display: grid;
     grid-area: "section";
-        h2{
-            font-weight: normal;
-            text-transform: uppercase;
-            margin-bottom: 0.313rem;
-        }
+    h2{
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-bottom: 0.313rem;
+    }
 }
 
 .article__first-title{
@@ -138,14 +142,14 @@ article{
 }   
 
 .article__cards-containers{
-    animation: article__cards-transition 2s ease-out 1.4s normal both;
+    @include cards-model;
+    @include flex-between;
     width: 85%;
     max-width: 21.875rem;
     min-height: 4.063rem;
     line-height:0.125rem;
     padding-left: 1rem;
-    @include cards-model;
-    @include flex-between;
+    animation: article__cards-transition 2s ease-out 1.4s normal both;
     transform-origin: right;
 }
 
@@ -153,40 +157,35 @@ article{
     
     width: 80%;
     overflow: hidden;
-    h3 {
+    h3 { 
+        @include elipsis-overflow;
         font-size: 1rem;
         line-height: 1rem;
         margin: 1rem 0 0.625rem 0;
-        white-space:nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+       
         
-    }  p {
+    }  & p {
+        @include elipsis-overflow;
         margin: 0;
         font-size: 0.938rem;
-        line-height: 0.938rem;
-        white-space:nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        
+        line-height: 0.938rem;  
     }
 }
     
 .article__column-icon{
     @include flex;
-    align-items: flex-end;
     @include flex-center;
+    align-items: flex-end;
     font-weight: bold;
     max-height: 2.5rem;
     padding-top: 0.375rem;
-    
-        p{
-            margin: 0;
-        }       
+    p{
+        margin: 0;
+    }       
 }
 
 .article-cards__transition-container{ /*main-transition*/
-   @include flex-center;
+    @include flex-center;
     @include align-center;
     visibility: hidden;
     font-size: $primary-logo-font-size;

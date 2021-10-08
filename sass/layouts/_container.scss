@@ -7,12 +7,12 @@
 @keyframes blinking-icons {
     0%,
     50%,
-    100% {
+    100%{
       opacity: 1;
     }
   
     25%,
-    75% {
+    75%{
       opacity: 0;
     }
   }
@@ -23,13 +23,12 @@ section{
     display:grid;
     grid-area: "section";
     padding: 3.75rem 0 4.063rem 0;
-
-        &__cards-text{
-            width: 100%;
+    &__cards-text{
+        width: 100%;
     }
-            h2{
-               margin: 0 0 0.313rem 1.25rem;
-            }
+        h2{
+            margin: 0 0 0.313rem 1.25rem;
+        }
 }
 
 .section__cards-bloc{
@@ -43,16 +42,14 @@ section{
     background-color: $primary-background-color;
     @include border-radius;
     @include box-shadow;
-   
-        h3,p{
-            line-height: 0.1rem;
-            @include align-center;
+    h3,p{
+        line-height: 0.1rem;
+        @include align-center;
     }
-
-            .section__cards-containers{
-                    @include flex-between;
-                    @include align-center;
-                    background-color: $primary-background-color;
+        .section__cards-containers{
+            @include flex-between;
+            @include align-center;
+            background-color: $primary-background-color;
     }
 }
 
@@ -111,11 +108,11 @@ footer{
     display: grid;
     grid-area: "footer";
     background-color: $footer-background-color;
-        & ul li{
-            line-height: 0.62rem;
-            margin-bottom: 0.62rem;
-            font-size:$secondary-text-size;
-        }
+    & ul li{
+        line-height: 0.62rem;
+        margin-bottom: 0.62rem;
+        font-size:$secondary-text-size;
+    }
 }
 
 .icon--margin-1{

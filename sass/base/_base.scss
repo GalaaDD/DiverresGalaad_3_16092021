@@ -1,4 +1,5 @@
 body{
+    @include titles-primary-color;
     max-width: 23.43rem;
     margin: 0 auto;
     display: grid;
@@ -9,8 +10,6 @@ body{
     "footer";
     grid-auto-flow: column;
     font-family: 'Roboto', sans-serif;
-    @include titles-primary-color;
-    
 }
 
 .logo--hover{

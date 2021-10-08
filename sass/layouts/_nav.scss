@@ -3,12 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 nav{
+    @include titles-primary-color;
     display: grid;
     grid-area: "nav";
-    @include titles-primary-color;
-        h2{
-            margin-left: 1.25rem;
-        }
+    h2{
+        margin-left: 1.25rem;
+    }
         div li{
             list-style-type: none;
             font-weight: bold;
@@ -30,38 +30,34 @@ nav{
 }
 
 .nav__numbers-icons{
+    @include flex-center;
+    @include align-center;
+    height:1.25rem;
+    width: 1.25rem;
     color: $text-secondary-color;
     background-color: $primary-color;
     border:solid 2px $primary-color;
     border-radius: 1.56rem;
-    height:1.25rem;
-    width: 1.25rem;
-    @include flex-center;
-    @include align-center;
     font-weight:bold;
 }
 
 .nav__cards-container{
     @include border-radius;
     @include box-shadow;
-   background-color: $tertiary-background-color;
+    width: 100%;
+    background-color: $tertiary-background-color;
     padding: 1.56rem 0 1.56rem 0;
     margin-bottom:1.56rem;
-    width: 100%;
-
-            a i{
-                color: $text-tertiary-color;
-                margin: 0 1.563rem 0 1.25rem;
-            }
-       
-            &:hover {
-                background-color:  $primary-color;
+    a i{
+        color: $text-tertiary-color;
+            margin: 0 1.563rem 0 1.25rem;
+        }
+            &:hover{
+                
+                background-color: $primary-color; 
                 @include lighten;
-
                 &:hover i{
-                    color: $primary-color;
+                        color: $primary-color;
                 }    
-            } 
-
-           
+            }      
 }
