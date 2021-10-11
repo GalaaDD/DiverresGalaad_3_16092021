@@ -33,6 +33,12 @@ header{
         width: 70%;
     }
     p{ 
+        @include desktop-only{
+          width:100%;
+        }
+        @include tab-only{
+            width:100%;
+        }
         margin: 0 0 2.188rem;
         width: 76%;
     }

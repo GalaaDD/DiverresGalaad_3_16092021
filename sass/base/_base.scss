@@ -1,6 +1,5 @@
 body{
-    @include titles-primary-color;
-    max-width: 23.43rem;
+    max-width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-areas: 
@@ -10,6 +9,14 @@ body{
     "footer";
     grid-auto-flow: column;
     font-family: 'Roboto', sans-serif;
+    @include titles-primary-color;
+    @include desktop-only{
+        grid-template-columns: 4fr;
+        max-width: 100%;
+    }
+    @include tab-only{
+        max-width: 100%;
+    }
 }
 
 .logo--hover{

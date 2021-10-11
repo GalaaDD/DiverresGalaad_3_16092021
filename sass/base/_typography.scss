@@ -29,6 +29,9 @@ ul{
 }
 
 .bloc--flex{
+    @include desktop-only{
+        justify-content: end;
+    }
     @include flex-center;
     @include flex-column;
     flex-wrap:wrap;

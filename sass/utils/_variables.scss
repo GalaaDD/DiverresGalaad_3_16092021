@@ -1,4 +1,4 @@
-// colors-variables
+/*colors-variables*/
 $primary-color: #9356DC ;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
@@ -10,16 +10,16 @@ $secondary-background-color:#eaeaea;
 $tertiary-background-color:#f6f6f6;
 $footer-background-color: #353535;
 $border-color: $tertiary-color;
-//font-variables
+/*font-variables*/
 $primary-text-size:1.125rem;
 $secondary-text-size: 0.87rem;
 $tertiary-text-size: 0.75rem;
 $primary-logo-font-size: 1.25rem;
-//responsive
-$breakpoints-desktop: (
-  desktop: 64rem
-  );
-
-  $breakpoints-tab: (
-  tab: 64rem
+/*responsive*/
+$breakpoints: (
+  desktop:64.063rem,
+  desktop-min-small:64.063rem,
+  desktop-max-small:70.625rem,
+  tab-max:64rem,
+  tab-min:31.25rem
   );

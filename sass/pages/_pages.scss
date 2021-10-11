@@ -78,16 +78,31 @@ header{
     width: 85%;
     }
 
+.header__image-container{
+    width: 100%;
+}
+
 .header__image{
+    @include desktop-only{
+        height:25rem;
+    }
     z-index: 1;
     position: relative;
-    width: 23.438rem;
+    width: 100%;
     height: 15.625rem;
     object-fit: cover;
 }
 
 main { 
     background-color: $tertiary-background-color;    
+}
+
+
+.cards-bloc--flex{
+    @include desktop-only{
+        @include flex-center;
+        width: 100%;
+    }
 }
 
 .secondary-title{
@@ -105,7 +120,9 @@ main {
     h2{
         font-family: 'Shrikhand', sans-serif;
         font-size: 1.75rem;
-        margin: 2.5rem 0 0 0;
+        @include desktop-only{
+            margin-top: 1.5rem 0 0 0;
+        }
     }
 }
 
@@ -125,6 +142,9 @@ article{
 }
 
 .article__first-title{
+    @include desktop-only{
+       margin-top:15px;
+    }
     margin-top: -2.5rem;
 }
 
@@ -136,6 +156,9 @@ article{
 }
 
 .article__title-border{
+    @include tab-only{
+        width: 4%;
+    }
     border: 0.125rem solid $tertiary-color;
     width: 12%;
     margin-bottom: 0.875rem;
@@ -151,6 +174,18 @@ article{
     padding-left: 1rem;
     animation: article__cards-transition 1.2s ease-out 1.4s normal both;
     transform-origin: right;
+
+    @include desktop-only{
+        width: 22.813rem;
+        margin: 0.313rem 0.313rem;
+    }
+    @include desktop-only-small{
+        width: 19.875rem;
+    }
+    @include tab-only{
+        max-width: inherit;
+        width: 94.5%;
+    }
 }
 
 .article__column-text{
