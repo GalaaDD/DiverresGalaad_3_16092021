@@ -50,8 +50,8 @@ nav{
     @include box-shadow;
     @include desktop-only{
         margin: 20px;
+        @include zoom;
     }
-    @include zoom;
     width: 100%;
     background-color: $tertiary-background-color;
     padding: 1.56rem 0 1.56rem 0;
@@ -61,7 +61,9 @@ nav{
             margin: 0 1.563rem 0 1.25rem;
         }
             &:hover{
-                @include zoom-hover;
+                @include desktop-only{
+                   @include zoom-hover;
+                }
                 background-color: $primary-color; 
                 @include lighten;
                 &:hover i{

@@ -41,17 +41,23 @@ section{
 
 .section__cards-containers{
     @include desktop-only{
-        width: 100%;
+       
         margin: 1.25rem;
-    }
+        width: 80%;
     @include zoom;
-    width: 80%;
+    }
+       @include tab-only{
+        width: 95%;
+       }
+    width:89%;
     margin-top: 0.875rem;
     background-color: $primary-background-color;
     @include border-radius;
     @include box-shadow;
     &:hover{
-    @include zoom-hover;
+        @include desktop-only{
+        @include zoom-hover;
+        }
     }
     h3,p{
         line-height: 0.1rem;
