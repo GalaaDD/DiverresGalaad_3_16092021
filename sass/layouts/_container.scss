@@ -44,11 +44,15 @@ section{
         width: 100%;
         margin: 1.25rem;
     }
-    width: 87%;
+    @include zoom;
+    width: 80%;
     margin-top: 0.875rem;
     background-color: $primary-background-color;
     @include border-radius;
     @include box-shadow;
+    &:hover{
+    @include zoom-hover;
+    }
     h3,p{
         line-height: 0.1rem;
         @include align-center;
