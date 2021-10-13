@@ -46,9 +46,9 @@ section{
         width: 80%;
     @include zoom;
     }
-       @include tab-only{
+    @include tab-only{
         width: 95%;
-       }
+    }
     width:89%;
     margin-top: 0.875rem;
     background-color: $primary-background-color;

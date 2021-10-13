@@ -1,6 +1,5 @@
 body{
     position: relative;
-    z-index: 3;
     max-width: 100%;
     margin: 0 auto;
     display: grid;
@@ -54,32 +53,20 @@ body{
 
 
 /*loading*/
-.loading-bloc{
-    background-color:white;
-    animation: loading-transition-background -1020ms 3.5s linear reverse ;
-}
 
 .loading-container{
- width: 100%;
- height: 0;
- position:relative;
- top: 420px;
- z-index: 2;
- animation: loading-transition 1000ms 3s linear both ;
- display: flex;
- justify-content: center;
- align-content: center;
-}
-
-.loading {
-    display: flex;
-    justify-content: center;
-  }
+  height: 100%;
+  position:fixed;
+  top: 0;
+  bottom:0;
+  right:0;
+  left:0;
+  z-index: 2;
+  margin: auto;
+  animation: loading-transition 3s 3s linear both ;
+  background-color:white;
   
-  .loading--full-height {
-    align-items: center;
-    height: 100%;
-  }
+}
   
   .loading::after {
     content: "";
@@ -89,8 +76,19 @@ body{
     border-top-color: #9356DC;
     border-bottom-color: #9356DC;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto;
+    z-index: 1;
     transform: rotate(0.16turn);
     animation: loading 3000ms 150ms infinite cubic-bezier(.9,0,.1,1);
+   
   }
   
   @keyframes loading {
@@ -105,20 +103,12 @@ body{
   
   @keyframes loading-transition {
     from {
-      opacity: 1;
+      opacity: 0.9;
+      visibility: visible;
     }
     
     to {
       opacity:0;
-    }
-  }
-
-  @keyframes loading-transition-background {
-    from {
-      opacity: 0.5;
-    }
-    
-    to {
-      opacity:0;
+      visibility:hidden;
     }
   }
