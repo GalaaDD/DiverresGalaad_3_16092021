@@ -48,7 +48,7 @@
 @keyframes article__cards-transition {
     0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-1.25rem);
     }
 
     100% {
@@ -73,11 +73,22 @@ header{
 }
 
 .logo--size{
+    padding-top:0.625rem;
+    @include desktop-only{
     padding-top: 1.25rem;
+    }
 }
+
 .header__title{
     width: 85%;
+    @include flex-center;
+    img{
+        width:10.5rem;
     }
+    @include desktop-only{
+        width:95%;
+    }
+}
 
 .header__image-container{
     width: 100%;
@@ -122,7 +133,7 @@ main {
         font-family: 'Shrikhand', sans-serif;
         font-size: 1.75rem;
         @include desktop-only{
-            margin-top: 1.5rem 0 0 0;
+            margin-top: 1.5rem;
         }
     }
 }
@@ -134,7 +145,7 @@ main {
     
 article{
     display: grid;
-    grid-area: "section";
+    grid-template-areas: "section";
     h2{
         font-weight: normal;
         text-transform: uppercase;
@@ -144,25 +155,26 @@ article{
 
 .article__first-title{
     @include desktop-only{
-       margin-top:15px;
+       margin-top:0.938rem;
     }
     margin-top: -2.5rem;
 }
 
 .article__title{
-    @include margin-left;
+    margin-left: 1.25rem;
     h2{
         font-size: $primary-text-size;
     }
 }
 
 .article__title-border{
-    @include tab-only{
-        width: 4%;
-    }
     border: 0.125rem solid $tertiary-color;
     width: 12%;
     margin-bottom: 0.875rem;
+    @include tab-only{
+        width: 4%;
+    }
+    
 }   
 
 .article__cards-containers{
@@ -175,7 +187,6 @@ article{
     padding-left: 1rem;
     animation: article__cards-transition 1.2s ease-out 1.4s normal both;
     transform-origin: right;
-
     @include desktop-only{
         width: 22.813rem;
         margin: 0.313rem 0.313rem;
@@ -190,7 +201,6 @@ article{
 }
 
 .article__column-text{
-    
     width: 80%;
     overflow: hidden;
     h3 { 
@@ -198,8 +208,6 @@ article{
         font-size: 1rem;
         line-height: 1rem;
         margin: 1rem 0 0.625rem 0;
-       
-        
     }  & p {
         @include elipsis-overflow;
         margin: 0;
@@ -225,7 +233,7 @@ article{
     @include align-center;
     visibility: hidden;
     font-size: $primary-logo-font-size;
-    color:$tertiary-color;
+    color:transparent;
     background-color: $tertiary-color;
     border-radius:0 1rem 1rem 0;
     padding: 0;
@@ -233,9 +241,6 @@ article{
     transform-origin:right;
     transition: 500ms all;
     opacity: 0;
-   
-   
-   
 }
 
 .article__cards-containers:hover> .article-cards__transition-container{/*main-transition*/
@@ -244,7 +249,8 @@ article{
    min-width: 20%;
    margin-left: 1.25rem;
    opacity: 1;
-   animation: slide-left 450ms linear 450ms right both;
+   transform-origin:right;
+   animation: slide-left 450ms linear;
    font-size: $primary-logo-font-size;
    .transition--white-check-icon{
         animation: rotate-center 0.5s ease-in-out both;

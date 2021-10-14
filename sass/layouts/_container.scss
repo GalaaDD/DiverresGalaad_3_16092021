@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-/*key Frames*/
+/*keyFrames-"Nouveau"*/
 @keyframes blinking-icons {
     0%,
     50%,
@@ -16,12 +16,14 @@
       opacity: 0;
     }
   }
+/*keyFrames-"Nouveau"*/
 
+/*section*/
 section{ 
     background-color: $tertiary-background-color;
     @include flex-column;
-    display:grid;
-    grid-area: "section";
+    display: grid;
+    grid-template-areas: "section";
     padding: 3.75rem 0 4.063rem 0;
     &__cards-text{
         width: 100%;
@@ -33,27 +35,26 @@ section{
 
 .section__cards-bloc{
     @include flex-center;
+    flex-wrap: wrap;
     @include desktop-only{
         flex-wrap:nowrap;
     }
-    flex-wrap: wrap;
 }
 
 .section__cards-containers{
-    @include desktop-only{
-       
-        margin: 1.25rem;
-        width: 80%;
-    @include zoom;
-    }
-    @include tab-only{
-        width: 95%;
-    }
     width:89%;
     margin-top: 0.875rem;
     background-color: $primary-background-color;
     @include border-radius;
     @include box-shadow;
+    @include desktop-only{
+        margin: 1.25rem;
+        width: 80%;
+        @include zoom;
+    }
+    @include tab-only{
+        width: 95%;
+    }
     &:hover{
         @include desktop-only{
         @include zoom-hover;
@@ -62,9 +63,6 @@ section{
     h3,p{
         line-height: 0.1rem;
         @include align-center;
-        }
-        .section__cards-containers{
-            @include flex-between;
     }
 }
 
@@ -85,7 +83,7 @@ section{
 }
 
 .section__cards-text{
-    @include margin-left;
+    margin-left: 1.25rem;
     @include border-radius;
     padding-bottom: 0.62rem;
     background-color: $primary-background-color;
@@ -101,7 +99,6 @@ section{
 .icon--absolute{
     animation: blinking-icons 4s ease-in-out 0s infinite normal both;
     position: relative;
-
 }
 
 span{
@@ -113,14 +110,13 @@ span{
     top: 0.875rem; right: 0.75rem;
     border-radius: 0.125rem;
     padding:0.563rem 0.719rem;
-   
 }
-
+/*FOOTER*/
 footer{
     color: $text-secondary-color;
     background-color:$footer-background-color;
     display: grid;
-    grid-area: "footer";
+    grid-template-areas: "footer";
     background-color: $footer-background-color;
     & ul li{
         line-height: 0.62rem;

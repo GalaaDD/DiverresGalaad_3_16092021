@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 h1{
-    height: 28px;
-    margin:20px 0 10px 0;
+    height: 1.75rem;
+    margin:1.25rem 0 0.625rem 0;
 }
 
 h1,.footer__title {
@@ -16,6 +16,9 @@ a {
     color: $text-primary-color;
 }
 
+img {
+    object-fit: cover;
+}
 ul{
     list-style-type: none;
 }

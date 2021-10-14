@@ -12,14 +12,9 @@
 @mixin align-center{
     align-items: center;
 }
-
+/*flex-mixins*/
 @mixin flex{
     display: flex;
-}
-
-@mixin flex-start{
-    display: flex; 
-    justify-content: flex-start;
 }
 
 @mixin flex-center{
@@ -47,7 +42,7 @@
 @mixin box-shadow{
     box-shadow: 0px 5px 20px 0px rgba(233,233,233,1);
 }
-
+/*---*/
 @mixin main-btn{
     background:linear-gradient(355deg,#9356dc 0%, #ff79da 80%);
     color: $text-secondary-color;
@@ -64,32 +59,8 @@
 
 }
 
-@mixin padding-right{
-    padding-right: 0.75rem;
-}
-
-@mixin padding-top{
-    padding-top: 0.75rem;
-}
-
-@mixin paddings-right-mobile{
-    padding-right: 0.93rem;
-}
-
 @mixin margin-sides-mobile {
     margin: 0 1.25rem 0 1.875rem;
-}
-
-@mixin margin-right{
-    margin-right: 1.25rem;
-}
-
-@mixin margin-left{
-    margin-left: 1.25rem;
-}
-
-@mixin margin-bottom{
-    margin-bottom: 1.25rem;
 }
 
 @mixin cards-model{
@@ -115,6 +86,20 @@
 	}
 }
 
+/*zoom*/
+@mixin zoom {
+    display:inline-block;
+    position: relative;
+    max-width: 110%;
+    transition: all 200ms ease-in;
+    transform: scale(1);  
+}
+
+@mixin zoom-hover{
+    z-index: 2;
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
 
 /*responsive-Desktop*/
 
@@ -138,28 +123,3 @@
     }
 }
 
-@mixin zoom {
-    display:inline-block;
-    position: relative;
-    max-width: 110%;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1); 
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1); 
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1);
-    transition: all 200ms ease-in;
-    transform: scale(1);  
-}
-
-@mixin zoom-hover{
-    z-index: 2;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.5);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.5);   
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.5);
-    transition: all 200ms ease-in;
-    transform: scale(1.1);
-}

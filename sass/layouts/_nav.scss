@@ -5,7 +5,7 @@
 nav{
     @include titles-primary-color;
     display: grid;
-    grid-area: "nav";
+    grid-template-areas: "nav";
     h2{
         margin-left: 1.25rem;
     }
@@ -49,25 +49,25 @@ nav{
     @include border-radius;
     @include box-shadow;
     @include desktop-only{
-        margin: 20px;
+        margin: 1.25rem;
         @include zoom;
     }
     width: 100%;
     background-color: $tertiary-background-color;
-    padding: 1.56rem 0 1.56rem 0;
+    padding: 0.5rem 0 0.5rem 0;
     margin-bottom:1.56rem;
     a i{
         color: $text-tertiary-color;
             margin: 0 1.563rem 0 1.25rem;
         }
-            &:hover{
-                @include desktop-only{
-                   @include zoom-hover;
-                }
-                background-color: $primary-color; 
-                @include lighten;
-                &:hover i{
-                        color: $primary-color;
-                }    
-            }      
+    &:hover{
+        background-color: $primary-color; 
+        @include lighten;
+        @include desktop-only{
+            @include zoom-hover;
+        }
+        &:hover i{
+            color: $primary-color;
+        }    
+    }      
 }
