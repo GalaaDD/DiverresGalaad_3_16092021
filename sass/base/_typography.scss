@@ -21,6 +21,18 @@ img {
 }
 ul{
     list-style-type: none;
+    @include desktop-only{
+        @include flex;
+        @include flex-space-around;
+        @include align-center;
+    }
+
+    @include tab-only{
+        @include flex;
+        @include flex-space-around;
+        @include align-center;
+    }
+    
 }
 
 .btn--size{

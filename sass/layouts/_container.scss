@@ -53,9 +53,14 @@ section{
         @include zoom;
     }
     @include tab-only{
-        width: 95%;
+        width: 45%;
+        margin: 0.625rem;
+        @include zoom;
     }
     &:hover{
+        @include tab-only{
+            @include zoom-hover;
+        }
         @include desktop-only{
         @include zoom-hover;
         }
@@ -134,6 +139,15 @@ footer{
 .footer__title{
     font-size: $primary-text-size;
     margin: 0 0 1.56rem 0;
+    @include desktop-only{
+        margin:0;
+    }
+    @include desktop-only-small{
+        margin:0;
+    }
+    @include tab-only{
+        margin:0;
+    }
 }
 
 .link--white{
