@@ -146,6 +146,14 @@ main {
 article{
     display: grid;
     grid-template-areas: "section";
+    @include desktop-only{
+        display: unset;
+    }
+
+    @include desktop-only-small{
+        display: unset;
+    }
+
     h2{
         font-weight: normal;
         text-transform: uppercase;

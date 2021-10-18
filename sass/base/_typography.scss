@@ -45,7 +45,7 @@ ul{
 
 .bloc--flex{
     @include desktop-only{
-        justify-content: end;
+        justify-content:flex-start;
     }
     @include flex-center;
     @include flex-column;
