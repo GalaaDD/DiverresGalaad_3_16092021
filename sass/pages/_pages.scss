@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes rotate-center {
+@keyframes rotate-center{
     0%{
         transform: rotate(0);
     }
@@ -45,7 +45,7 @@
         }
     }
 
-@keyframes article__cards-transition {
+@keyframes article__cards-transition{
     0% {
         opacity: 0;
         transform: translateY(-1.25rem);
@@ -106,9 +106,12 @@ header{
 }
 
 main { 
-    background-color: $tertiary-background-color;    
+    background-color: $tertiary-background-color;  
+    margin-top:-50px;
+    position:relative;
+    z-index:5;
+    border-radius:1.875rem 1.875rem 0 0;
 }
-
 
 .cards-bloc--flex{
     @include desktop-only{
@@ -122,9 +125,6 @@ main {
     @include flex-space-around;
     background-color: $tertiary-background-color;
     align-items: baseline;
-    position: relative;
-    bottom: 3.75rem;
-    z-index:3;
     border-radius:1.875rem 1.875rem 0 0;
 }
 
@@ -165,7 +165,7 @@ article{
     @include desktop-only{
        margin-top:0.938rem;
     }
-    margin-top: -2.5rem;
+   
 }
 
 .article__title{
@@ -173,17 +173,22 @@ article{
     h2{
         font-size: $primary-text-size;
     }
-}
-
-.article__title-border{
-    border: 0.125rem solid $tertiary-color;
-    width: 12%;
-    margin-bottom: 0.875rem;
-    @include tab-only{
-        width: 4%;
+    &::after{
+        content:"";
+        position: absolute;
+        z-index:6;
+        border: 0.125rem solid $tertiary-color;
+        width: 2.7rem;
+        @include desktop-only{
+            left:inherit;
+            right:inherit;
+            width: 2.2%;
+        }
+        @include tab-only{
+            width: 8%;
+        }    
     }
-    
-}   
+}  
 
 .article__cards-containers{
     @include cards-model;
@@ -265,7 +270,6 @@ article{
         & i{
             color: $text-secondary-color;
             align-self: center;
-           
         }
-   }
+    }
 }
